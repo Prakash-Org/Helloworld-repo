@@ -5,12 +5,12 @@ node{
 
   }
   stage('Compile-Package') { 
-   def mvnHome =tool name: 'maven 3.5.3', type: 'maven'
+   def mvnHome =tool name: 'maven 3.6.3', type: 'maven'
    bat "${mvnHome}/bin/mvn clean install"
   }
   
   stage('SonarQube Analysis') {  
-   def mvnHome =tool name: 'maven 3.5.3', type: 'maven'
+   def mvnHome =tool name: 'maven 3.6.3', type: 'maven'
    withSonarQubeEnv('sonar_scanner') {
     bat "${mvnHome}/bin/mvn -X sonar:sonar"
    }  
