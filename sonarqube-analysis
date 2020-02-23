@@ -23,6 +23,12 @@ node{
                   error "Pipeline aborted due to quality gate failure: ${qg.status}"
               }
           }
-      }    
-
+      }
+      
+     stage('Slack Channel'){
+      slackSend channel: 'Welcome to Jenkins!!!!', 
+      message: 'good', 
+      teamDomain: 'jenkins-practice-channel', 
+      tokenCredentialId: 'Jenkins-Slack-demo'     
+     }
  }
