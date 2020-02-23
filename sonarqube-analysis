@@ -29,6 +29,7 @@ node{
          slackSend channel: '#jenkins-pipeline-demo',
          color: 'good',
          message: 'Welcome to Jenkins-Slack Integration !!!!!!',
+         baseUrl: 'https://hooks.slack.com/services/',
          teamDomain: 'prakashreddygade',
          tokenCredentialId: 'slack-token-for-Jenkins'
      }
