@@ -26,9 +26,9 @@ node{
       }
       
      stage('Slack Channel'){
-      slackSend channel: 'Welcome to Jenkins!!!!', 
-      message: 'good', 
-      teamDomain: 'jenkins-practice-channel', 
-      tokenCredentialId: 'Jenkins-Slack-demo'     
+      slackSend channel: '#jenkins-pipeline-demo', color: 'good', 
+      message: 'Welcome to Jenkins-Slack Integration!!!!', 
+      teamDomain: 'jenkins-slack-plugin', 
+      tokenCredentialId: 'slack-token'
      }
  }
